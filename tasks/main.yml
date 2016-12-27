@@ -1,0 +1,12 @@
+- name: APT | Tools
+  apt: name={{ item }}
+  with_items:
+    - htop
+    - nload
+    - ethstatus
+    - vim
+    - bash-completion
+    - nmap
+    - tcpdump
+  when: ansible_pkg_mgr == "apt"
+
