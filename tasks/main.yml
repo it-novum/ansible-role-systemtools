@@ -8,5 +8,6 @@
     - bash-completion
     - nmap
     - tcpdump
+    - unzip
   when: ansible_pkg_mgr == "apt"
 
