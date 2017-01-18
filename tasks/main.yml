@@ -11,4 +11,9 @@
     - unzip
     - pbzip2
   when: ansible_pkg_mgr == "apt"
-
+- name: Copy bashrc for root    
+    src: ../files/.bashrc
+    dest: /root/.bashrc
+    owner: root
+    group: root
+    mode: "u=rw,g=r,o=r"
