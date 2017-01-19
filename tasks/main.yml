@@ -14,6 +14,6 @@
 - name: Copy bashrc for root
   copy: src=.bashrc dest=/root/.bashrc owner=root group=root mode="u=rw,g=r,o=r"
 - name: Copy profile for root    
-  copy: src=.profile dest=/root/.bashrc owner=root group=root mode="u=rw,g=r,o=r" 
+  copy: src=.profile dest=/root/.profile owner=root group=root mode="u=rw,g=r,o=r" 
 - name: Copy vimrc for root  
   copy: src=.vimrc dest=/root/.vimrc owner=root group=root mode="u=rw,g=r,o=r" 
