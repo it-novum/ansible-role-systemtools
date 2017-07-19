@@ -10,6 +10,8 @@
     - tcpdump
     - unzip
     - pbzip2
+    - nmon
+    
   when: ansible_pkg_mgr == "apt"
 - name: Copy profile for root
   copy: "src=\".{{ item }}\" dest=/root/.{{ item }} owner=root group=root mode=\"u=rw,g=r,o=r\""
