@@ -1,16 +1,18 @@
 - name: APT | Tools
-  apt: name={{ item }}
-  with_items:
-    - htop
-    - nload
-    - ethstatus
-    - vim
-    - bash-completion
-    - nmap
-    - tcpdump
-    - unzip
-    - pbzip2
-    - nmon
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - htop
+      - nload
+      - ethstatus
+      - vim
+      - bash-completion
+      - nmap
+      - tcpdump
+      - unzip
+      - pbzip2
+      - nmon
     
   when: ansible_pkg_mgr == "apt"
 - name: Copy profile for root
@@ -19,4 +21,3 @@
     - profile
     - bashrc
     - vimrc
-
