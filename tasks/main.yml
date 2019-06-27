@@ -13,6 +13,9 @@
       - unzip
       - pbzip2
       - nmon
+      - pigz
+      - lzop
+      - lbzip2
     
   when: ansible_pkg_mgr == "apt"
 - name: Copy profile for root
