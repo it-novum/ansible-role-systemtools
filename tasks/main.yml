@@ -1,3 +1,12 @@
+- name: Check for passlib
+  set_fact:
+    pwtest: "{{ 'test'| password_hash('bcrypt') }}"
+
+- name: Fail if passlib is not installed
+  fail:
+    msg: Please install " python-passlib python-bcrypt " / " python3-passlib python3-bcrypt " depending on python version
+  when: pwtest == '*0'
+
 - name: APT | Tools
   apt:
     name: "{{ packages }}"
